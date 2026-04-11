@@ -56,7 +56,7 @@ app:
     access-token-expiration: 900000
     refresh-token-expiration: 604800000
   cors:
-    allowed-origin: ${CORS_ORIGIN:http://localhost:5173}
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
   rate-limit:
     max-attempts: 5
     block-duration-minutes: 15

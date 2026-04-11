@@ -30,6 +30,6 @@ public interface WorkOrderRepository extends JpaRepository<WorkOrder, Long> {
             @Param("assignedToId") Long assignedToId,
             @Param("priority") com.gs.administraciones.model.enums.Priority priority);
 
-    @Query("SELECT COUNT(wo) FROM WorkOrder wo WHERE wo.status IN ('ABIERTA', 'EN_PROGRESO')")
+    @Query("SELECT COUNT(wo) FROM WorkOrder wo WHERE wo.status IN (com.gs.administraciones.model.enums.WorkOrderStatus.ABIERTA, com.gs.administraciones.model.enums.WorkOrderStatus.EN_PROGRESO)")
     long countOpenWorkOrders();
 }
